@@ -1,0 +1,8 @@
+<p>home-page works!</p>
+
+<div *ngIf="gnomes && gnomes.Brastlewark.length > 0">
+
+  <p  *ngFor = "let gnom of gnomes.Brastlewark">
+    {{gnom.name}}
+  </p>
+</div>
