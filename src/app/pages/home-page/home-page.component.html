@@ -6,7 +6,15 @@
     <p>loading</p> 
   </div>
   <div class="filter-container">
-    <input class= 'filter-gnoms' [(ngModel)]="search" type="text" name = 'search' placeholder="Search by name">
+    <input class= 'filter-gnoms' [(ngModel)]="search" type="text" name = 'search' placeholder="Search by {{searchType}}">
+  </div>
+  <label for="selectType">Choose search Type</label>
+  <div class="select-container">
+    <select [(ngModel)]="searchType" name="selectType"> 
+      <option *ngFor="let opt of selectTypes" [value]="opt.key">
+        {{ opt.value }}
+      </option>
+    </select>
   </div>
   <div class="list-all-gnoms">
     <div *ngIf="!gnoms && isData">
@@ -15,7 +23,7 @@
       </p> 
     </div>
     <ul *ngIf="gnoms && gnoms.Brastlewark.length > 0">
-      <li *ngFor="let gnom of gnoms.Brastlewark | filter : search">
+      <li *ngFor="let gnom of gnoms.Brastlewark | filter : search : searchType">
         <div class="card">
           <a [routerLink]= "['/gnom', gnom.name]">
             <div class='gnom-image'>
