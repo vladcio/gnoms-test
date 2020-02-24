@@ -12,14 +12,21 @@ export class HomePageComponent implements OnInit {
     public dataService: DataService
   ) { }
 
-  public gnomes;
+  public gnoms;
+  search: string;
+  isData = false;
 
   ngOnInit() {
+    this.getGnoms();
+  }
+
+  getGnoms() {
     this.dataService.fetchAll()
-      .subscribe(data => this.gnomes = data);
-    setTimeout(() => {
-      console.log(this.gnomes);
-    }, 3000);
+      .subscribe(data => {
+        this.gnoms = data;
+        this.isData = true;
+        console.log(this.gnoms);
+      });
   }
 
 }
