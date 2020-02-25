@@ -1,12 +1,9 @@
 
 
 <div class="gnoms">
-  <h1>gnoms: </h1>
-  <div class="loading" *ngIf="!isData">
-    <p>loading</p> 
-  </div>
+  <h1>Brastlewark gnoms: </h1>
   <div class="filter-container">
-    <input class= 'filter-gnoms' [(ngModel)]="search" type="text" name = 'search' placeholder="Search by {{searchType}}">
+    <input class= 'filter-gnoms' [(ngModel)]="search" type="text" name='search' placeholder="Search by {{searchType}}">
   </div>
   <label for="selectType">Choose search Type</label>
   <div class="select-container">
@@ -16,26 +13,6 @@
       </option>
     </select>
   </div>
-  <div class="list-all-gnoms">
-    <div *ngIf="!gnoms && isData">
-      <p>
-        No gnoms in town. Try again later!
-      </p> 
-    </div>
-    <ul *ngIf="gnoms && gnoms.Brastlewark.length > 0">
-      <li *ngFor="let gnom of gnoms.Brastlewark | filter : search : searchType">
-        <div class="card">
-          <a [routerLink]= "['/gnom', gnom.name]">
-            <div class='gnom-image'>
-              <img [src]="gnom.thumbnail" alt="Avatar" onerror ="this.src='/assets/images/user.png'"/>
-            </div>  
-            <div class="container">
-              <h4><b>{{gnom.name}}</b></h4>
-            </div>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
+  <app-gnoms-list></app-gnoms-list>
 </div>
  

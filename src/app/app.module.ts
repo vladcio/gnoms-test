@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { GnomsListComponent } from './components/gnoms-list/gnoms-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    FilterPipe
+    FilterPipe,
+    GnomsListComponent,
   ],
   imports: [
     BrowserModule,

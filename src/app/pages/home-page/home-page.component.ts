@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-home-page',
@@ -8,15 +7,8 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(
-    public dataService: DataService
-  ) { }
-
-  public gnoms;
-  search: any;
+  search: string;
   searchType: string;
-  isData = false;
-  name: string;
 
   selectTypes = [
     {key: 'id', value: 'Id'},
@@ -35,17 +27,10 @@ export class HomePageComponent implements OnInit {
     {key: 'friends', value: 'Friends'}
   ];
 
-  ngOnInit() {
-    this.getGnoms();
-  }
+  constructor(
+  ) { }
 
-  getGnoms() {
-    this.dataService.fetchAll()
-      .subscribe(data => {
-        this.gnoms = data;
-        this.isData = true;
-        console.log(this.gnoms);
-      });
+  ngOnInit() {
   }
 
 }
