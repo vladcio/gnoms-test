@@ -1,0 +1,31 @@
+.displayed-gnom {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  max-width: 50%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: rgba(0,0,0, 0.3);
+}
+
+.displayed-gnom-details {
+  margin: auto;
+
+  min-width: 25%;
+}
+.displayed-gnom-details div {
+  padding-bottom: 4%;
+}
+
+.displayed-gnom-photo {
+  max-height: 600px;
+}
+
+.displayed-gnom-photo img {
+  max-width: 100%;
+  border-radius: 10px;
+  height: 100%;
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GnomsTown, Gnoms } from 'src/app/interfaces/gnom.interface';
 import { DataService } from 'src/app/services/data.service';
+import { GnomService } from 'src/app/services/gnom.service';
 
 @Component({
   selector: 'app-gnoms-list',
@@ -31,7 +32,8 @@ export class GnomsListComponent implements OnInit {
     {key: 'friends', value: 'Friends'}
   ];
   constructor(
-    public dataService: DataService
+    public dataService: DataService,
+    private gnomService: GnomService
   ) {
     // setting default searchType
     this.searchType = this.selectTypes[1].key;
@@ -52,7 +54,7 @@ export class GnomsListComponent implements OnInit {
 
   gnomDetails(gnom) {
     this.displayedGnom = gnom;
-    console.log(this.displayedGnom);
+    this.gnomService.sendGnom(gnom);
   }
 
 }

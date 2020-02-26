@@ -9,6 +9,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { GnomsListComponent } from './components/gnoms-list/gnoms-list.component';
+import { GnomProfileComponent } from './components/gnom-profile/gnom-profile.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { GnomsListComponent } from './components/gnoms-list/gnoms-list.component
     HomePageComponent,
     FilterPipe,
     GnomsListComponent,
+    GnomProfileComponent,
   ],
   imports: [
     BrowserModule,

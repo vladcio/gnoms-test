@@ -13,25 +13,6 @@
   width: 90%;
 }
 
-.displayed-gnom {
-  display: flex;
-  flex-direction: row;
-  width: 40%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border: 1px solid rgb(115,123,145);
-  border-radius: 10px;
-  margin-bottom: 15px;
-  background-color: rgba(0,0,0, 0.3);
-}
-
-.displayed-gnom-details {
-  padding-left: 2%;
-}
-.displayed-gnom-details div {
-  padding-bottom: 2%;
-}
-
 .filter-container {
   display: flex;
   justify-content: center;

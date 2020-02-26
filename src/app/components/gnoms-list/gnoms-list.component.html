@@ -10,28 +10,7 @@
     <input [(ngModel)]="search" type="text" name='search' placeholder="Search by {{searchType}}">
   </div>
 </div>
-<div *ngIf="displayedGnom" class="displayed-gnom">
-  <div class="displayed-gnom-photo">
-    <img [src]=[displayedGnom.thumbnail] alt="Sample project image" class="img-fluid rounded z-depth-1">
-  </div>
-  <div class="displayed-gnom-details">
-    <div>{{ "Name: " + displayedGnom.name }}</div>
-    <div>{{ "Age: " + displayedGnom.age }}</div>
-    <div>{{ "Weight: " + displayedGnom.weight }}</div>
-    <div>{{ "Height: " + displayedGnom.height }}</div>
-    <div>{{ "Hair Color: " + displayedGnom.hair_color }}</div>
-      Professions:
-    <div *ngFor= "let profession of displayedGnom.professions" style="padding-left: 5%;">
-      {{ " - " + profession }}
-    </div>
-      Friends:
-    <div *ngFor= "let friend of displayedGnom.friends" style="padding-left: 5%;">
-     {{ " - " + friend }}
-  </div>
-  
-<!-- <app-gnom-profile></app-gnom-profile> -->
-  </div>
-</div>
+<app-gnom-profile></app-gnom-profile>
 <div class="list-all-gnoms">
   <div class="loading" *ngIf="!isData">
     <p>loading</p> 
