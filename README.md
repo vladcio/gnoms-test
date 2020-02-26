@@ -1,3 +1,10 @@
+
+Build with Angular. run 'ng serve' for starting project.
+
+I used only one page with multiple components in order to organize and reuse the code writed for profile or the list. Also created a service for database and one for gnoms to comunicate between components.
+For the filter i used a simple pipe where i manage all the filters/searches.
+About the interface, i didin't used anything fancy. if it's needed i can spend more time on displaying all the informacion.
+
 # GnomesTownApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
