@@ -21,7 +21,7 @@
   <ul *ngIf="gnomsTown">
     <li *ngFor="let gnom of gnomsTown.Brastlewark | filter : search : searchType">
       <div class="card"  #ele>
-        <a (click)=gnomDetails(gnom) >
+        <a (click)=gnomDetails(gnom)>
           <div class='gnom-image'>
             <img [src]="gnom.thumbnail" alt="Avatar" onerror ="this.src='/assets/images/user.png'"/>
           </div>  

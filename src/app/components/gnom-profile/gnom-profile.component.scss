@@ -11,10 +11,6 @@
   background-color: rgba(0,0,0, 0.3);
 }
 
-.close-button {
-  position: relative;
-}
-
 .close {
   cursor: pointer;
   position: absolute;
@@ -24,6 +20,9 @@
   font-size: 150%;
 }
 
+.displayed-gnom-photo {
+  max-height: 600px;
+}
 
 .displayed-gnom-details {
   margin: auto;
@@ -34,20 +33,17 @@
   padding-bottom: 4%;
 }
 
-.displayed-gnom-photo {
-  max-height: 600px;
-}
 
 @media(min-width: 768px){
+  .displayed-gnom {
+    max-width: 55%;
+  }
+  
   .displayed-gnom-photo img {
     max-width: 100%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     height: 100%;
-  }
-
-  .displayed-gnom {
-    max-width: 55%;
   }
 }
 

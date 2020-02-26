@@ -18,14 +18,12 @@ export class GnomProfileComponent implements OnDestroy {
       if (gnom) {
         this.gnom = gnom;
       } else {
-        // clear gnom when no gnom received
         this.gnom = undefined;
       }
     });
   }
 
   ngOnDestroy() {
-    // unsubscribe to ensure no memory leaks
     this.subscription.unsubscribe();
   }
 

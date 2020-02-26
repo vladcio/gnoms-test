@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GnomsTown, Gnoms } from 'src/app/interfaces/gnom.interface';
+import { GnomsTown } from 'src/app/interfaces/gnom.interface';
 import { DataService } from 'src/app/services/data.service';
 import { GnomService } from 'src/app/services/gnom.service';
 
@@ -12,7 +12,6 @@ export class GnomsListComponent implements OnInit {
 
   public gnomsTown: GnomsTown;
   isData = false;
-  displayedGnom: Gnoms;
   search: string;
   searchType: string;
   selectTypes = [
@@ -53,8 +52,8 @@ export class GnomsListComponent implements OnInit {
   }
 
   gnomDetails(gnom) {
-    this.displayedGnom = gnom;
     this.gnomService.sendGnom(gnom);
+    window.scrollTo(0, 0);
   }
 
 }
