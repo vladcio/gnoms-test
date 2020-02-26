@@ -29,4 +29,8 @@ export class GnomProfileComponent implements OnDestroy {
     this.subscription.unsubscribe();
   }
 
+  clearGnom() {
+    this.gnomService.clearGnom();
+  }
+
 }

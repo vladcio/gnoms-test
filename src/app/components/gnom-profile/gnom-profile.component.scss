@@ -2,8 +2,8 @@
   margin: auto;
   display: flex;
   flex-direction: row;
+  position: relative;
   width: auto;
-  max-width: 50%;
   height: auto;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 10px;
@@ -11,11 +11,25 @@
   background-color: rgba(0,0,0, 0.3);
 }
 
+.close-button {
+  position: relative;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  transform: translate(0%, -50%);
+  font-size: 150%;
+}
+
+
 .displayed-gnom-details {
   margin: auto;
-
   min-width: 25%;
 }
+
 .displayed-gnom-details div {
   padding-bottom: 4%;
 }
@@ -24,8 +38,34 @@
   max-height: 600px;
 }
 
-.displayed-gnom-photo img {
-  max-width: 100%;
-  border-radius: 10px;
-  height: 100%;
+@media(min-width: 768px){
+  .displayed-gnom-photo img {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+  }
+
+  .displayed-gnom {
+    max-width: 55%;
+  }
+}
+
+@media(max-width: 768px){
+  .displayed-gnom {
+    flex-direction: column;
+  }
+
+  .displayed-gnom-photo img {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: auto;
+  }
+
+  .displayed-gnom-details {
+    font-size: smaller;
+    margin-left: 5%;
+    font-weight: bold;
+  }
 }

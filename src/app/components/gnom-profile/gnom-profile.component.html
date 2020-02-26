@@ -1,4 +1,5 @@
 <div *ngIf="gnom" class="displayed-gnom">
+  <span class="close" (click)=clearGnom()>x</span>
   <div class="displayed-gnom-photo">
     <img [src]=[gnom.thumbnail] alt="profile photo" >
   </div>
@@ -8,11 +9,11 @@
     <div>{{ "Weight: " + gnom.weight }}</div>
     <div>{{ "Height: " + gnom.height }}</div>
     <div>{{ "Hair Color: " + gnom.hair_color }}</div>
-      Professions:
+    <div> Professions: </div>
     <div *ngFor= "let profession of gnom.professions" style="padding-left: 5%;">
       {{ " - " + profession }}
     </div>
-      Friends:
+    <div> Friends: </div>
     <div *ngFor= "let friend of gnom.friends" style="padding-left: 5%;">
      {{ " - " + friend }}
   </div>

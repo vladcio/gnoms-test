@@ -4,11 +4,6 @@
   transition: 0.3s;
 }
 
-.filter-container {
-  text-align: center;
-  font-size: larger;
-}
-
 .select-container select, .filter-gnoms input{
   width: 90%;
 }
@@ -16,11 +11,8 @@
 .filter-container {
   display: flex;
   justify-content: center;
-}
-
-.displayed-gnom img {
-  border-radius: 10px;
-  max-width: 100%;
+  font-size: larger;
+  padding-bottom: 1%;
 }
 
 .card:hover {
@@ -48,6 +40,8 @@
 .gnom-image img {
   width: 100%;
   height: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 @media(min-width: 768px){
@@ -58,6 +52,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding-left: 20px;
+
   }
   
   .list-all-gnoms ul li{
