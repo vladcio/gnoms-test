@@ -4,6 +4,44 @@
   transition: 0.3s;
 }
 
+.filter-container {
+  text-align: center;
+  font-size: larger;
+}
+
+.select-container select, .filter-gnoms input{
+  width: 90%;
+}
+
+.displayed-gnom {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border: 1px solid rgb(115,123,145);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: rgba(0,0,0, 0.3);
+}
+
+.displayed-gnom-details {
+  padding-left: 2%;
+}
+.displayed-gnom-details div {
+  padding-bottom: 2%;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+}
+
+.displayed-gnom img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
 .card:hover {
   background-color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
@@ -13,7 +51,11 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.container {
+.hideDetails>.gnomDetails{
+  display: none;
+}
+
+.container-name {
   text-align: center;
 }
 
@@ -51,6 +93,11 @@
 }
 
 @media(max-width: 768px){
+
+  .filter-container {
+    flex-direction: column;
+  }
+
   .list-all-gnoms ul {
     display: flex;
     flex-direction: column;
@@ -72,6 +119,12 @@
   .gnom-image img{
     width: 100%;
     height: 200px;
+  }
+
+  .displayed-gnom {
+    width: 90%;
+    margin-right: 20px;
+    margin-left: 20px;
   }
   
 }

@@ -18,6 +18,7 @@ export class FilterPipe implements PipeTransform {
         case 'name': {
           return it.name.toLowerCase().includes(searchText);
           break;
+          console.log(searchText);
         }
         case 'id': {
           return it.id === Number(searchText);

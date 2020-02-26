@@ -2,17 +2,6 @@
 
 <div class="gnoms">
   <h1>Brastlewark gnoms: </h1>
-  <div class="filter-container">
-    <input class= 'filter-gnoms' [(ngModel)]="search" type="text" name='search' placeholder="Search by {{searchType}}">
-  </div>
-  <label for="selectType">Choose search Type</label>
-  <div class="select-container">
-    <select [(ngModel)]="searchType" name="selectType"> 
-      <option *ngFor="let opt of selectTypes" [value]="opt.key">
-        {{ opt.value }}
-      </option>
-    </select>
-  </div>
   <app-gnoms-list></app-gnoms-list>
 </div>
  

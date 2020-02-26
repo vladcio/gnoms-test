@@ -7,22 +7,3 @@
   text-align: center;
 }
 
-.filter-container {
-  display: flex;
-  justify-content: center;
-}
-
-.filter-gnoms {
-  width: 300px;
-  font-size: 20px;
-}
-
-@media(max-width: 768px){
-  
-  .filter-gnoms {
-    width: 90%;
-    font-size: 20px;
-    text-align: center;
-  }
-  
-}
