@@ -47,7 +47,6 @@ export class GnomsListComponent implements OnInit {
       .subscribe(data => {
         this.gnomsTown = data as GnomsTown;
         this.isData = true;
-        console.log(this.gnomsTown);
       });
   }
 
